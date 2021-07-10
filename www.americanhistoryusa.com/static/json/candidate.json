@@ -1319,6 +1319,50 @@
       "candidate_score": 1.0
     }
   },
+   {
+    "model": "campaign_trail.candidate",
+    "pk": 77,
+    "fields": {
+      "first_name": "George W.",
+      "last_name": "Bush",
+      "election": 101,
+      "party": "Republican",
+      "state": "Texas",
+      "priority": 1,
+      "description": "<p>George W. Bush enters 2000 with the support of the Republican establishment and the name recognition of his father. He has governed Texas for five years and won bipartisan support in that state. He seeks to duplicate that formula on the national stage.</p><p>Bush has broad appeal and a united base, but lacks experience and gravitas in the eyes of some. Can he make the case that he will move beyond the partisanship of the Clinton years and bring \"compassionate conservatism\" to the nation?</p>",
+      "color_hex": "#FF0000",
+      "secondary_color_hex": "#FFA0A0",
+      "is_active": 1,
+      "image_url": "../static/images/george-w-bush-2000.jpg",
+      "electoral_victory_message": "<h3>Congratulations! You have won the 2000 election.</h3><p>Confounding the predictions of many experts, you were able to turn the tables on Al Gore, in spite of the economy and Clinton's popularity.</p><p>On the political front, you can push for tax cuts to spur the economy and return the budget surplus to the American people. You might also pursue education and immigration reform, individual Social Security accounts, and new laws to defend the family and the sanctity of life.</p>",
+      "electoral_loss_message": "<h3>Sorry! You have lost the 2000 election.</h3><p>Perhaps it was always a long-shot, with the Democrats in such a commanding position after eight years of Bill Clinton. In any case, at least you are still the Governor of Texas.</p><p>Expect Al Gore to unleash a new round of government programs and environmental regulations. You are still youngish, however. If the election was close this time, perhaps you can run again in 2004, or work on behalf your brother Jeb.</p>",
+      "no_electoral_majority_message": "<h3>Wow! You have won in a squeaker.</h3><p>No candidate achieved a majority of the electoral votes, marking the first time this has happened since 1824. Fortunately for you, the majority of U.S. states have Republican controlled congressional delegations, and they will cast their votes accordingly.</p><p>Given the incredibly close nature of the election, you will surely be expected to govern as a moderate, conciliatory President. Right??</p>",
+      "description_as_running_mate": "''",
+      "candidate_score": 1.0
+    }
+  },
+    {
+    "model": "campaign_trail.candidate",
+    "pk": 78,
+    "fields": {
+      "first_name": "John",
+      "last_name": "Kerry",
+      "election": 101,
+      "party": "Democrat",
+      "state": "Massachusetts",
+      "priority": 1,
+      "description": "<p>John Kerry is a Vietnam war veteran, and a Senator from Massachusetts. He won many awards during his time as a serviceman, including three purple hearts.</p><p>John Kerry has a popular domestic agenda when it comes to healthcare and the economy, and can use his history as a serviceman to burnish his credentials on national security. However, he will have to finesse the issue of the War on Terror, which Bush remains popular on, and attacking Bush too hard on it or the war in Iraq may fuel allegations of him being a “flip-flopper.”</p>",
+      "color_hex": "#0000FF",
+      "secondary_color_hex": "#90C0FF",
+      "is_active": 1,
+      "image_url": "https://i.imgur.com/1Dzz3a9.png",
+      "electoral_victory_message": "<h3>Congratulations! You have won the 2004 election.</h3><p>Confounding the predictions of many experts, you were able to turn the tables on Al Gore, in spite of the economy and Clinton's popularity.</p><p>On the political front, you can push for tax cuts to spur the economy and return the budget surplus to the American people. You might also pursue education and immigration reform, individual Social Security accounts, and new laws to defend the family and the sanctity of life.</p>",
+      "electoral_loss_message": "<h3>Sorry! You have lost the 2004 election.</h3><p>Perhaps it was always a long-shot, with the Democrats in such a commanding position after eight years of Bill Clinton. In any case, at least you are still the Governor of Texas.</p><p>Expect Al Gore to unleash a new round of government programs and environmental regulations. You are still youngish, however. If the election was close this time, perhaps you can run again in 2004, or work on behalf your brother Jeb.</p>",
+      "no_electoral_majority_message": "<h3>Wow! You have won in a squeaker.</h3><p>No candidate achieved a majority of the electoral votes, marking the first time this has happened since 1824. Fortunately for you, the majority of U.S. states have Republican controlled congressional delegations, and they will cast their votes accordingly.</p><p>Given the incredibly close nature of the election, you will surely be expected to govern as a moderate, conciliatory President. Right??</p>",
+      "description_as_running_mate": "''",
+      "candidate_score": 1.0
+    }
+  },
   {
     "model": "campaign_trail.candidate",
     "pk": 78,
