@@ -63,6 +63,14 @@
       "running_mate": 39
     }
   },
+    {
+    "model": "campaign_trail.running_mate",
+    "pk": 1000,
+    "fields": {
+      "candidate": 77,
+      "running_mate": 81
+    }
+  },
   {
     "model": "campaign_trail.running_mate",
     "pk": 82,
