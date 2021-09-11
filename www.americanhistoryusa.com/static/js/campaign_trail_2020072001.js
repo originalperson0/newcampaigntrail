@@ -99,16 +99,6 @@
 	                $("#opponent_selection_description_window").html(t)
 	        }
 	    }
-
-	    function findFromPK(array, pk) {
-	    	a = 0
-	    	for (i in array) {
-	    		if (array[i].pk == pk) {
-	    			a = i
-	    			break
-	    		}
-	    	}
-	    	return a;
 	    
 
 	    function s(t, i, l) {
