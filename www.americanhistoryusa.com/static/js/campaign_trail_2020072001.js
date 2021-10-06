@@ -126,7 +126,8 @@ function divideElectoralVotesProp(e, t) {
 			}
 		} else if (id == 16) {
 			return "2016a_"+campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, cand)].fields.last_name+"_"+campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, running_mate)].fields.last_name+".html"
-		} else{
+		} else if (campaignTrail_temp.election_json[findFromPK(campaignTrail_temp.election_json, id)].fields.year+"_"+campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, cand)].fields.last_name+"_"+campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, running_mate)].fields.last_name+".html") false
+		{
 			return campaignTrail_temp.election_json[findFromPK(campaignTrail_temp.candidate_json, cand)].fields.last_name+"_"+campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, running_mate)].fields.last_name+".html"
 		}
 	}
