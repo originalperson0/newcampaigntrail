@@ -3,7 +3,7 @@ function csrfToken() {
 		var t = null;
 		if (document.cookie && "" != document.cookie)
 			for (var i = document.cookie.split(";"), a = 0; a < i.length; a++) {
-				var s = jQuery.trim(i[a]);
+				var s = jQuery.trim(i);
 				if (s.substring(0, e.length + 1) == e + "=") {
 					t = decodeURIComponent(s.substring(e.length + 1));
 					break
@@ -247,7 +247,7 @@ function divideElectoralVotesProp(e, t) {
 			}), 4 != i.length)); a++);
 		P(i, "order");
 		var s = "";
-		for (a = 0; a < i.length; a++) s += '<input type="radio" name="game_answers" class="game_answers"             id="game_answers[' + a.toString() + ']" value="' + e.answers_json[i[a].key].pk + '"/>\t\t    <label for="game_answers[' + a.toString() + ']">' + e.answers_json[i[a].key].fields.description + "</label><br>";
+		for (a = 0; a < i.length; a++) s += '<input type="radio" name="game_answers" class="game_answers"             id="game_answers[' + a.toString() + ']" value="' + e.answers_json[i.key].pk + '"/>\t\t    <label for="game_answers[' + a.toString() + ']">' + e.answers_json[i.key].fields.description + "</label><br>";
 		var l = '<div class="game_header">    <h2>NEW CAMPAIGN TRAIL</h2>    </div>    <div class="inner_window_question">        <div class="inner_inner_window">        <h3>' + e.questions_json[e.question_number].fields.description + '</h3>            <div id="question_form">                <form name="question">' + s + '</form>            </div>        </div>        <p><button id="answer_select_button" class="answer_select_button">CONTINUE</button>        <button id="view_electoral_map">Latest Polls/Electoral Map</button></p>    </div>    <img id="candidate_pic" src="' + e.candidate_image_url + '">    <img id="running_mate_pic" src="' + e.running_mate_image_url + '">    <div class="inner_window_sign_display">        <div id="progress_bar">\t    <h3>Question ' + (e.question_number + 1) + " of " + e.global_parameter_json[0].fields.question_count + '</h3>        </div>        <div id="campaign_sign">        <p>' + e.candidate_last_name + "</p>        <p>" + e.running_mate_last_name + "</p>        </div>    </div>";
 		$("#game_window").html(l), $("#answer_select_button").click(function() {
 			var t = $("input:radio[name=game_answers]:checked").val();
@@ -849,26 +849,26 @@ function divideElectoralVotesProp(e, t) {
 		for (a = 0; a < i.length; a++) {
 			for (var n = [], l = 0, o = 0, _ = 0, r = 0; r < e.player_answers.length; r++)
 				for (var d = 0; d < e.answer_score_global_json.length; d++)
-					if (e.answer_score_global_json[d].fields.answer == e.player_answers[r] && e.answer_score_global_json[d].fields.candidate == e.candidate_id && e.answer_score_global_json[d].fields.affected_candidate == i[a]) {
+					if (e.answer_score_global_json[d].fields.answer == e.player_answers[r] && e.answer_score_global_json[d].fields.candidate == e.candidate_id && e.answer_score_global_json[d].fields.affected_candidate == i) {
 						n.push(e.answer_score_global_json[d].fields.global_multiplier);
 						break
 					} for (r = 0; r < n.length; r++) l += n[r];
-			if (o = i[a] == e.candidate_id && l < -.4 ? .6 : 1 + l, i[a] == e.candidate_id) var c = o * (1 + F() * e.global_parameter_json[0].fields.global_variance) * e.difficulty_level_multiplier;
+			if (o = i == e.candidate_id && l < -.4 ? .6 : 1 + l, i == e.candidate_id) var c = o * (1 + F() * e.global_parameter_json[0].fields.global_variance) * e.difficulty_level_multiplier;
 			else c = o * (1 + F() * e.global_parameter_json[0].fields.global_variance);
 			_ = 1 == isNaN(c) ? 1 : c, s.push({
-				candidate: i[a],
+				candidate: i,
 				global_multiplier: _
 			})
 		}
 		var u = [];
 		for (a = 0; a < i.length; a++) {
 			var v = [];
-			for (r = 0; r < e.candidate_issue_score_json.length && (e.candidate_issue_score_json[r].fields.candidate != i[a] || (v.push({
+			for (r = 0; r < e.candidate_issue_score_json.length && (e.candidate_issue_score_json[r].fields.candidate != i || (v.push({
 					issue: e.candidate_issue_score_json[r].fields.issue,
 					issue_score: e.candidate_issue_score_json[r].fields.issue_score
 				}), v.length != e.issues_json.length)); r++);
 			u.push({
-				candidate_id: i[a],
+				candidate_id: i,
 				issue_scores: v
 			})
 		}
@@ -876,7 +876,7 @@ function divideElectoralVotesProp(e, t) {
 		for (a = 0; a < i.length; a++) {
 			var m = [];
 			for (r = 0; r < e.candidate_state_multiplier_json.length; r++)
-				if (e.candidate_state_multiplier_json[r].fields.candidate == i[a]) {
+				if (e.candidate_state_multiplier_json[r].fields.candidate == i) {
 					var p = e.candidate_state_multiplier_json[r].fields.state_multiplier * s[a].global_multiplier * (1 + F() * e.global_parameter_json[0].fields.global_variance);
 					if (m.push({
 							state: e.candidate_state_multiplier_json[r].fields.state,
@@ -884,7 +884,7 @@ function divideElectoralVotesProp(e, t) {
 						}), m.length == e.states_json.length) break;
 					P(m, "state")
 				} f.push({
-				candidate_id: i[a],
+				candidate_id: i,
 				state_multipliers: m
 			})
 		}
@@ -904,7 +904,7 @@ function divideElectoralVotesProp(e, t) {
 			for (r = 0; r < f[a].state_multipliers.length; r++) {
 				var w = 0;
 				for (d = 0; d < e.player_answers.length; d++)
-					for (var j = 0; j < e.answer_score_state_json.length; j++) e.answer_score_state_json[j].fields.state == f[a].state_multipliers[r].state && e.answer_score_state_json[j].fields.answer == e.player_answers[d] && e.answer_score_state_json[j].fields.candidate == e.candidate_id && e.answer_score_state_json[j].fields.affected_candidate == i[a] && (w += e.answer_score_state_json[j].fields.state_multiplier);
+					for (var j = 0; j < e.answer_score_state_json.length; j++) e.answer_score_state_json[j].fields.state == f[a].state_multipliers[r].state && e.answer_score_state_json[j].fields.answer == e.player_answers[d] && e.answer_score_state_json[j].fields.candidate == e.candidate_id && e.answer_score_state_json[j].fields.affected_candidate == i && (w += e.answer_score_state_json[j].fields.state_multiplier);
 				if (0 == a) {
 					e.running_mate_state_id == f[a].state_multipliers[r].state && (w += .004 * f[a].state_multipliers[r].state_multiplier);
 					for (d = 0; d < e.player_visits.length; d++) e.player_visits[d] == f[a].state_multipliers[r].state && (w += .005 * Math.max(.1, f[a].state_multipliers[r].state_multiplier))
