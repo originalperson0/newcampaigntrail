@@ -216,11 +216,11 @@ achList = {
         "</table><br><b><em>1984</em></b><br><table>"
     ],
     //1972b
-    "Wallaloha": [
-        "'Wallaloha'",
-        "As George Wallace, win Hawaii.",
-        "</table><br><b><em>1972b</em></b><br><table>"
-    ],
+    // "Wallaloha": [
+ //     "'Wallaloha'",
+ //     "As George Wallace, win Hawaii.",
+ //     "</table><br><b><em>1972b</em></b><br><table>"
+ // ],
     //1936c
     "fixyourmod": [
         "Fix Your Damn Mod",
